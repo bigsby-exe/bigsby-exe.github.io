@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: 2022-05-30 00:30
-catagories: [test, hello]
+categories: [test, hello]
 tags: [test]
 ---
 
