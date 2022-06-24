@@ -23,10 +23,10 @@ timezone: Europe/London
 
 title: Ecorp.dev                        # the main title
 
-tagline: A GitHub Pages Site  # it will display as the sub-title
+tagline: A Mostly MS PowerShell and Power Platform blog?   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A GitHub Pages Site built with jekyll and the chirpy theme.
+  A Mostly MS PowerShell and Power Platform blog? 
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ''
@@ -83,7 +83,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://pbs.twimg.com/profile_images/716837490376720384/ucRgJP1t_400x400.jpg
+avatar: /assets/img/pp.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
