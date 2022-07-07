@@ -10,8 +10,12 @@
 
     {% if paths.size == 0 or page.layout == 'home' %}
       <!-- index page -->
-      <span>{{ site.data.locales[lang].tabs.home | capitalize }}</span>
-
+      <span>
+        <a href="{{ '/' | relative_url }}">
+        {{ site.data.locales[lang].tabs.home | capitalize }}
+        </a>
+      </span>
+      
     {% else %}
 
       {% for item in paths %}
