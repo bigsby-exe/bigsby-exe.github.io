@@ -21,7 +21,8 @@ user.memberOf -any (group.objectId -in ['GROUP-GUID','GROUP-GUID','GROUP-GUID'])
 Once we have our group setup the MS Planner can attach to this and membership will be governed by the group(s) from the rule.
 
 ## Creating a Sharepoint List
-For the auto tagging in our use case we will create a Sharepoint List in the Office 365 group with the following structure
+For the auto tagging in our use case we will create a Sharepoint List in the Office 365 group with the following structure  
+
 | Title | Team | 
 | ----- | ---- |
 | Teams | Team 1 |
