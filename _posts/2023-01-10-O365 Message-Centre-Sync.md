@@ -11,7 +11,7 @@ tags: O365, Power-Automate, Message-Centre, Planner
 Syncing Message Centre messages to planner is a good way to get an overview in your org of what changes are coming from Microsoft in the near future and prepare to act upon them.  
 Luckily for us Microsoft have build this feature right into the [O365 Message Centre](https://admin.microsoft.com/Adminportal/Home#/MessageCenter), clicking the `Planner Sync` button will automatically create a Power Automate flow for us.
 
-![Teams Admin Screenshot](./../../assets/2023/01/10/planner-sync.png)
+![Teams Admin Screenshot](./../../assets/img/2023/01/10/planner-sync.png)
 
 The Planner that can be attached to a Team or Office 365 group. In my case I will create a dynamic O365 group with a dynamic membership rule to pick up users from other groups, this way management of this group will happen automatically based on the other teams.  
 The rule syntax is shown below and we can add up to 50 groups this way.
@@ -34,7 +34,7 @@ This will be used by our auto tagging flow to map the services to our Teams
 We should now have messages populating into our Planner, from here we want to check what Microsoft service the message is for and tag it with the appropriate coloured tag.  
 
 1. We will start with a `When a new task is created` trigger and select our group and plan.   
-![Power Automate Trigger Screenshot](./../../assets/2023/01/10/trigger.png)  
+![Power Automate Trigger Screenshot](./../../assets/img/2023/01/10/trigger.png)  
 2. Next we will initialize a blank array called 'teams'  
 3. To get the MS service in the message we will use a `Find text position` and  the search text of `]`  
 4. Followed by a `Substring` that takes the output from our previous action, has a start position of '1' and for the length we will use the following expression
@@ -42,7 +42,7 @@ We should now have messages populating into our Planner, from here we want to ch
     ```
     sub(outputs('Find_text_position')?['body'],1)
     ```
-    ![Power Automate Trigger Screenshot](./../../assets/2023/01/10/get-service.png)  
+    ![Power Automate Trigger Screenshot](./../../assets/img/2023/01/10/get-service.png)  
 
 5. Some messages have multiple services so we will use a `Compose` action with the following expression to split the results on a comma
     ```
@@ -73,4 +73,4 @@ We should now have messages populating into our Planner, from here we want to ch
     ```
     contains(variables('teams'),'Team 3')
     ```
-    ![Screenshot of Update a Task action](./../../assets/2023/01/10/tags.png)  
+    ![Screenshot of Update a Task action](./../../assets/img/2023/01/10/tags.png)  
