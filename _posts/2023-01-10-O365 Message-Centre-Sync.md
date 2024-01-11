@@ -3,7 +3,7 @@ layout: post
 title: "O365 Message Centre Sync to Planner"
 date: 2023-01-10 2:00
 categories: O365 Planner
-tags: O365, Power-Automate, Message-Centre, Planner
+tags: O365 Power-Automate Message-Centre Planner
 ---
 # Syncing Message Centre to Planner & Auto Tag
 

@@ -2,8 +2,8 @@
 layout: post
 title: "Restricting Entra Groups with Administrative Units"
 date: 2024-01-11 12:00
-categories: ["Entra", "Security", "Administration"]
-tags: ["Administrative Units", "Access Control", "Entra"]
+categories: Entra Security Administration
+tags: Administrative Units Access Control Entra
 ---
 
 # Restricting Entra Groups with Administrative Units

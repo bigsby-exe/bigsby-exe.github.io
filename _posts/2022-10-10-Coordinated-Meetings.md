@@ -3,7 +3,7 @@ layout: post
 title: "Surface Hub and Teams Rooms Coordinated Meetings"
 date: 2022-10-10 23:00
 categories: O365 Teams
-tags: Teams, Surface-Hub 
+tags: Teams Surface-Hub 
 ---
 # What is coordinated meetings 
 Coordinated meetings are setting that allow multiple meeting room devices to all join and leave calls together. This is useful if you have more than one surface hub in a single room or a mix of Teams rooms devices and surface hubs.  
