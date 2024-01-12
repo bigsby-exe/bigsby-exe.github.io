@@ -24,9 +24,9 @@ The process involves:
 
 #### Designing the Interface
 In my case I have an initial page displays all members, featuring a brief bio, their interests, and contact information, along with an "Edit Profile" button for updating personal info.
-![App Screenshot](./../../assets/img/2024/01/12/1_planner-sync.png)
+![App Screenshot](./../../assets/img/2024/01/12/1_app.png)
 The Edit screen has been created with the [PowerCat Creator kit](https://github.com/microsoft/powercat-creator-kit) and uses just a standard combobox for the tags picker that eferences a SharePoint list's choice column, where all tags are pre-defined.  
-![App Screenshot of tags dropdown](./../../assets/img/2024/01/12/2_planner-tags.png)
+![App Screenshot of tags dropdown](./../../assets/img/2024/01/12/2_app_tags.png)
 
 
 #### Integration with SharePoint
