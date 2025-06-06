@@ -30,7 +30,7 @@ The heart of this setup involves using N8N, an open-source workflow automation t
 Depending on the category assigned by the model, the importance level of the follow-up notification in [NTFY](https://ntfy.sh/) varies considerably.
 
 #### N8N Flow
-![N8N Flow Screenshot](./../../assets/img/2025/06/06n8n-flow.png)
+![N8N Flow Screenshot](./../../assets/img/2025/06/06/n8n-flow.png)
 
 #### Notification Through NTFY
 
