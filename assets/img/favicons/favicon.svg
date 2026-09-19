@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>E Corp</title>
+  <rect width="512" height="512" fill="#000"/>
+  <path fill="#fff" transform="rotate(-39 256 256)" d="M166 111H356V167H228V224H350V280H228V345H356V401H166Z"/>
+</svg>
