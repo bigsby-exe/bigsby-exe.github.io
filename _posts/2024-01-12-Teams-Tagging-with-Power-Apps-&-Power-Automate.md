@@ -24,9 +24,9 @@ The process involves:
 
 #### Designing the Interface
 In my case I have an initial page displays all members, featuring a brief bio, their interests, and contact information, along with an "Edit Profile" button for updating personal info.
-![App Screenshot](./../../assets/img/2024/01/12/1_app.png)
+![App Screenshot](/assets/img/2024/01/12/1_app.png)
 The Edit screen has been created with the [PowerCat Creator kit](https://github.com/microsoft/powercat-creator-kit) and uses just a standard combobox for the tags picker that eferences a SharePoint list's choice column, where all tags are pre-defined.  
-![App Screenshot of tags dropdown](./../../assets/img/2024/01/12/2_app_tags.png)
+![App Screenshot of tags dropdown](/assets/img/2024/01/12/2_app_tags.png)
 
 
 #### Integration with SharePoint
@@ -53,9 +53,9 @@ This is tracked using the SharePoint trigger "When an item or file is modified".
 3. **Tag Removal Process**: 
    - For each tag, a nested loop is initiated to list all members associated with that tag using "List the members for a tag."
    - Within this loop, a condition checks if the current user (identified by their User ID) is a member of the tag.  
-   ![Condition Screenshot](./../../assets/img/2024/01/12/3_match_user_to_id.png)
+   ![Condition Screenshot](/assets/img/2024/01/12/3_match_user_to_id.png)
    - If the condition is met (i.e., the user's ID matches the ID from the 'Get user profile' step), the user is removed from the tag using the "Delete a member from a tag" action.
-   !["Delete a member from a tag" action Screenshot](./../../assets/img/2024/01/12/4_delete_tag.png)
+   !["Delete a member from a tag" action Screenshot](/assets/img/2024/01/12/4_delete_tag.png)
 
 This approach ensures that all tags associated with a user are accurately identified and removed before updating them with new interests.
 
@@ -68,9 +68,9 @@ After exiting the first loop, once all the tags associated with a user are delet
    - The goal is to check if the display name of any tag matches the selected interests from the list.
 3. **Assigning Tags to User**:
    - If a match is found, we use the "Add member to a tag" action.  
-   ![Match User to Tag Screenshot](./../../assets/img/2024/01/12/6_match_tag_to_list.png)
+   ![Match User to Tag Screenshot](/assets/img/2024/01/12/6_match_tag_to_list.png)
    - This action requires the user's ID (obtained from the "Get User Profile" step) and the tag ID (retrieved earlier from the "List all tags for a Team" step).  
-   ![Add Tag Screenshot](./../../assets/img/2024/01/12/7_add_tag.png)
+   ![Add Tag Screenshot](/assets/img/2024/01/12/7_add_tag.png)
 
 
 
@@ -88,4 +88,4 @@ After exiting the first loop, once all the tags associated with a user are delet
   - To prevent this, you can periodically update a tag such as adding or removing one from your profile every 60 days. Alternatively, simply reactivate the flow when you receive an email notification about its deactivation.
 
 ### Full Flow
-![Full FLow Screenshot](./../../assets/img/2024/01/12/8_flow.png)
+![Full FLow Screenshot](/assets/img/2024/01/12/8_flow.png)
