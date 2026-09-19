@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gem "jekyll-theme-chirpy", "~> 7.6"
 
 # Jekyll uses ERB; some Ruby distributions package it separately.
-gem "erb", "~> 4.0"
+gem "erb", "~> 6.0"
 
 gem "html-proofer", "~> 5.0", group: :test
 
