@@ -1,46 +1,51 @@
-# Chirpy Starter [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy) [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+# Ecorp.dev
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem. If you have ever installed this theme gem, you can use the command `bundle info --path jekyll-theme-chirpy` to locate these files.
+Dan’s blog at [ecorp.dev](https://ecorp.dev), built with Jekyll and the
+[Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy).
 
-The Jekyll organization claims that this is to leave the ball in the user’s court, but this also results in users not being able to enjoy the out-of-the-box experience when using feature-rich themes.
+## Local development
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your Jekyll site. The following is a list of targets:
+Install Ruby 3.4 (see `.ruby-version`) and Bundler, then run:
 
-```shell
-.
-├── _config.yml
-├── _data
-├── _plugins
-├── _tabs
-└── index.html
+```sh
+bundle install
+bundle exec jekyll serve
 ```
 
-In order to save your time, and to prevent you from missing some files when copying, we extract those files/configurations of the latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+Open <http://localhost:4000>. Posts live in `_posts`, images in `assets/img`,
+and site settings in `_config.yml`. Use `/assets/img/...` paths for post images.
 
-## Prerequisites
+Before opening a pull request, run the production build and internal link checks:
 
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll` and `Bundler`.
-
-## Installation
-
-[**Use this template**][use-template] to generate a brand new repository and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
-
-Then clone it to your local machine and run:
-
-```
-$ bundle
+```sh
+bash tools/deploy.sh --dry-run
 ```
 
-## Usage
+External websites are excluded from this check so third-party outages do not
+block publication.
 
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+## Theme customizations
 
-## License
+The theme supplies its own includes, translations, assets, and Sass. Keep site
+styling in `assets/css/jekyll-theme-chirpy.scss` instead of copying the framework.
+The two local layouts are based on Chirpy 7.6.0: `home.html` preserves the slash
+prefixes on titles/categories, and `post.html` omits the author byline and keeps
+the reading time. Compare these layouts with upstream when upgrading the theme.
 
-This work is published under [MIT][mit] License.
+## Deployment and maintenance
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+GitHub Actions builds and checks pull requests. After a merge to `main`, the
+workflow builds and publishes to `gh-pages`, preserving the existing custom-domain
+`CNAME`. GitHub Pages should continue to serve the root of that branch.
+Only the deployment job has repository write permission. Do not run the deployment
+script without `--dry-run` locally; its publishing mode replaces the checkout.
+
+Dependabot proposes monthly updates for gems and GitHub Actions. Keep
+`Gemfile.lock` committed so local and CI builds use the same dependencies.
+
+```sh
+bundle update
+bash tools/deploy.sh --dry-run
+```
+
+This repository is licensed under [MIT](LICENSE).

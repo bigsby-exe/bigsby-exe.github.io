@@ -3,7 +3,8 @@
 !.git*
 !.editorconfig
 !.nojekyll
-!.travis.yml
+!.github/
+!.ruby-version
 
 # bundler cache
 _site
@@ -15,5 +16,3 @@ vendor
 # npm dependencies
 node_modules
 package-lock.json
-
-*.lock

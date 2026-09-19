@@ -9,6 +9,5 @@ Ecorp.dev created by [@bigsby_exe](https://twitter.com/Bigsby_exe)
 
 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=pCKDrDvaOKE
-" target="_blank"><img src="http://img.youtube.com/vi/pCKDrDvaOKE/0.jpg" 
+<a href="https://www.youtube.com/watch?feature=player_embedded&v=pCKDrDvaOKE" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/pCKDrDvaOKE/0.jpg"
 alt="Hello Friend" width="240" height="180" border="1" /></a>
