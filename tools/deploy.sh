@@ -53,6 +53,9 @@ build() {
 
   # build
   JEKYLL_ENV=production bundle exec jekyll b -d "$SITE_DIR$_baseurl" --config "$_config"
+
+  # Support clients that request the conventional root favicon path.
+  cp "assets/img/favicons/favicon.ico" "$SITE_DIR$_baseurl/favicon.ico"
 }
 
 test() {
