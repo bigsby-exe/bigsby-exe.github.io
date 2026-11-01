@@ -7,7 +7,7 @@ gem "jekyll-theme-chirpy", "~> 7.6"
 # Jekyll uses ERB; some Ruby distributions package it separately.
 gem "erb", "~> 6.0"
 
-gem "html-proofer", "~> 5.0", group: :test
+gem "html-proofer", "~> 5.2", group: :test
 
 platforms :windows, :jruby do
   gem "tzinfo", ">= 1", "< 3"
